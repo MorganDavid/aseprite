@@ -85,6 +85,7 @@ void Workspace::removeView(WorkspaceView* view)
 
 bool Workspace::closeView(WorkspaceView* view, bool quitting)
 {
+  setActiveView(view);
   return view->onCloseView(this, quitting);
 }
 
